@@ -83,6 +83,12 @@ class TransactionService {
       .where("id", transactionId)
       .andWhere("user_id", user_id)
       .delete();
+      if (transaction[0] === 0) {
+        return {
+          deletedTransaction: transaction,
+          msg: "Transaction Already Deleted or Unauthorized user",
+        };
+      }
     return {
       deletedTransaction: transaction,
       msg: "Transaction Deleted",
