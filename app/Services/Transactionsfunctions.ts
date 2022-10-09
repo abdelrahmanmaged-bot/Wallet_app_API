@@ -86,7 +86,7 @@ class TransactionService {
       if (transaction[0] === 0) {
         return {
           deletedTransaction: transaction,
-          msg: "Transaction Already Deleted or Unauthorized user",
+          msg: "Transaction Already Deleted ",
         };
       }
     return {
