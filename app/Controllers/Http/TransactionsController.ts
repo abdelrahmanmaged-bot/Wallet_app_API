@@ -1,5 +1,5 @@
 import type { HttpContextContract } from "@ioc:Adonis/Core/HttpContext";
-import TransactionService from "App/Services/Transactionsfunctions";
+import TransactionService from "App/Services/TransactionsMethods";
 
 export default class TransactionsController {
   async addtransaction({ request, response, auth }: HttpContextContract) {

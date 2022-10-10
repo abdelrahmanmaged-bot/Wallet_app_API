@@ -1,5 +1,5 @@
 import type { HttpContextContract } from "@ioc:Adonis/Core/HttpContext";
-import UserServices from "App/Services/Userfunctions";
+import UserServices from "App/Services/UserMethods";
 
 export default class UsersController {
   async signup({ request, response }: HttpContextContract) {
