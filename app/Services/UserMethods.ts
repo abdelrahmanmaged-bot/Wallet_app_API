@@ -1,6 +1,7 @@
 import User from "App/Models/User";
 import CreateUserValidator from "App/Validators/CreateUserValidator";
 
+
 class UserServices {
   public static async signup(request) {
     const data = await request.validate(CreateUserValidator);
@@ -10,6 +11,8 @@ class UserServices {
 
     return { user: user, message: "User added" };
   }
+
+  
 
   public static async login(request, auth) {
     var { uid, password } = request.only(["uid", "password"]);

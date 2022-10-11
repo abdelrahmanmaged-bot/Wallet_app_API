@@ -11,12 +11,12 @@ export default class CreateUserValidator {
     ]),
 
     phone_number: schema.string([
-        rules.mobile({ strict: true })
+        rules.mobile({ strict: true }),
+        rules.unique({ table: "users", column: "phone_number" })
     ]),
 
     name: schema.string({ trim: true }, [rules.alpha()]),
 
-    balance: schema.number.optional(),
 
     password: schema.string({}, [rules.minLength(8)]),
   });
